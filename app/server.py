@@ -35,7 +35,7 @@ async def textract(request):
         return JSONResponse(resp)
     except Exception as err:
         message = repr(err)
-        resp = {'error': err}
+        resp = {'error': message}
         return JSONResponse(resp)
 
 @app.route('/status', methods=['GET'])
